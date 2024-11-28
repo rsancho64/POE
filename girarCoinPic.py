@@ -32,8 +32,15 @@ class Application(ttk.Frame):
         self.button.pack()
         # self.pack()
                         
-    def setButtonImage(self, img):
+    def setButtonImage(self):
         self.button.destroy()
+
+        from PIL import ImageTk, Image
+        #  photoimage object to use image 
+        # photoCara = PhotoImage(file = r"./duro.cara.jpeg")
+    
+        img = ImageTk.PhotoImage(Image.open("./duro.cara.jpeg"))  
+        # l=Label(image=img)
         self.button = ttk.Button(self, image = img) #.pack(side = TOP)
                 
 if __name__ == "__main__":
@@ -41,12 +48,8 @@ if __name__ == "__main__":
     main_window = Tk()
     app = Application(main_window)
 
-    #  photoimage object to use image 
-    photoCara = PhotoImage(file = r"./duro.cara.jpeg")
-    # photoCruz = PhotoImage(file = r"./duro.cruz.jpeg")
-
     # app.setButtonImage(photoCara)
-    # app.setButtonImage(ph0toCruz)
+    app.setButtonImage() # app.setButtonImage(ph0toCruz)
     
     app.mainloop()
 
