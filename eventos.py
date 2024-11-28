@@ -1,4 +1,5 @@
 #! /usr/bin/python3
+
 # intro POE w py : https://enriquelazcorreta.gitbooks.io/tkinter/content/
 # un ejemplo:
 
